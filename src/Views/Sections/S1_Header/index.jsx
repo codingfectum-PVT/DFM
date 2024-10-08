@@ -1,10 +1,11 @@
 import emotionStyled from '@emotion/styled'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import bgVideo from '../../../assets/Dubai-bg-updated.mp4'
 import logo from '../../../assets/Dubau-logo.webm'
 import oldContainer from '../../../assets/old-container.png'
 import { Box, Button, Container, Grid, Link, Menu, Typography } from '@mui/material'
 import { CA, dexToolsLink, tgLink, uniSwapLink, xLink } from '../../../links'
+import AlertDialog from '../../Components/popup'
 const Wrapper = emotionStyled.div`
     min-height: 100vh;
     position: relative;
@@ -78,6 +79,7 @@ const HeaderSection = () => {
         console.error('Failed to copy: ', err);
       });
   };
+
   return (
     <Wrapper>
         <BackGroundVideo component="video" autoPlay muted loop controls={false}>
@@ -99,8 +101,8 @@ const HeaderSection = () => {
                 text= "Tokenomics"
               />
               <MenuLink 
-                targetLink = "#how-to-buy"
-                text= "How to buy"
+                targetLink = "#memes"
+                text= "Memes"
               />
               <MenuLink 
                 targetLink = {tgLink}
@@ -112,7 +114,7 @@ const HeaderSection = () => {
               />
             </Grid>
             <Grid xs={12} textAlign={'center'} margin={'40px 0'}>
-              
+              <AlertDialog />
               <LogoVideo component="video" autoPlay muted loop controls={false}>
                   <source src={logo} type="video/mp4" />
                   Your browser does not support the video tag.

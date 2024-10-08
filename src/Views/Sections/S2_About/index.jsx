@@ -31,7 +31,7 @@ const Wrapper = emotionStyled.div`
 `
 export const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id="about">
         <Typography variant='h3'>$DFMGI is a bold ERC-20 token designed to capture the extravagant wealth of Dubai’s elite, featuring Arabs with luxury mansions, private jets, supercars, and oil riches. With a limited supply of 100 million tokens, burnt liquidity pool for long-term security, and 0% taxes on transactions, DFMGI offers an exclusive, tax-free investment opportunity. Rooted in the power of the symbolic 786, this token is more than just crypto, it's a gateway to prestige and limitless ambition.</Typography>
         <Box padding={'5vh 20px'} textAlign={'center'}>
             <Button href={tgLink} target='_blank'>Telegram</Button>

@@ -99,7 +99,7 @@ const Card = ({imgsrc, text}) => {
 }
 export const Tokenomics = () => {
   return (
-    <Wrapper>
+    <Wrapper id="tokenomics">
         <Container maxWidth="lg">
             <Typography variant='h2'>Tokenomics</Typography>
             <Grid container justifyContent={'center'}>

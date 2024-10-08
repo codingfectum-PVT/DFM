@@ -39,7 +39,7 @@ const Card = ({imgsrc, text}) => {
 }
 export const Memes = () => {
   return (
-    <Wrapper>
+    <Wrapper id="memes">
         <Container maxWidth="xl">
             <Typography variant='h2'>Memes</Typography>
             <Grid container justifyContent={'center'}>
