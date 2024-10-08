@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+body{
+  background-color: #000000;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,6 +16,12 @@
   }
 }
 
+@font-face {
+  font-family: "primary";
+  src: url(./assets/fonts/ROCKB.woff2);
+}
+
+*{font-family: 'primary' !important ; color: #fff;}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -34,5 +43,159 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.MuiTypography-h2{
+  text-align: center;
+  font-size: 7vw !important;
+  color: #ffffff;
+  margin-bottom: 3vh !important;
+}
+
+.MuiTypography-h3{
+  max-width: 70vw;
+  text-align: center;
+  margin: auto !important;
+  font-size: 2.6vw !important;
+  /* color: #E6FF00; */
+
+  
+  color: transparent;
+  background: rgb(255, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(238, 100, 10, 1) 7%,
+    rgba(210, 169, 39, 1) 14%,
+    rgba(234, 252, 62, 1) 21%,
+    rgba(134, 248, 82, 1) 28%,
+    rgba(99, 245, 156, 1) 35%,
+    rgba(87, 241, 215, 1) 42%,
+    rgba(75, 216, 237, 1) 49%,
+    rgba(66, 158, 239, 1) 56%,
+    rgba(57, 74, 241, 1) 63%,
+    rgba(126, 45, 244, 1) 70%,
+    rgba(162, 84, 247, 1) 77%,
+    rgba(229, 117, 249, 1) 84%,
+    rgba(251, 103, 164, 1) 91%,
+    rgba(253, 127, 190, 1) 97%,
+    rgba(255, 0, 191, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 500%;
+  animation: peragraColor 10s linear infinite;
+}
+
+.MuiButton-text.MuiButton-textPrimary{
+  font-size: 2.2vw;
+  background: #FF3131;
+  color: #E6FF00;
+  margin: 0 1.5vw;
+  padding: 1vh 3.5vw;
+  -webkit-text-stroke: 1.5px rgb(0, 0, 0);
+  border: 3px solid black;
+  box-shadow: 0 0 1.5vw 0.2vw #FF3131;
+}
+.MuiButton-text.MuiButton-textPrimary:hover{
+  background: #00732F;
+  border: 3px solid black;
+  box-shadow: 0 0 1.5vw 0.2vw #00732F;
+}
+.MuiButton-text.MuiButton-textPrimary span{
+  color: #E6FF00;
+}
+.MuiButton-text.MuiButton-textPrimary.green{
+  background: #00732F;
+  color: #ffffff;
+  -webkit-text-stroke: unset;
+  border: 3px solid black;
+  margin: 2.5vh 0;
+  padding: 1vh 20px;
+  width: 100%;
+  box-shadow: 0 0 1.5vw 0.2vw #00732F;
+}
+
+.MuiButton-text.MuiButton-textPrimary.green:hover{
+  background: #FF3131;
+  border: 3px solid black;
+  box-shadow: 0 0 1.5vw 0.2vw #FF3131;
+}
+
+@keyframes peragraColor {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@media screen and (max-width: 1600px){
+  
+  .MuiTypography-h2{
+    text-align: center;
+    font-size: 8vw !important;
+    color: #ffffff;
+    margin-bottom: 3vh !important;
+  }
+
+  .MuiTypography-h3{
+    max-width: 60vw;
+    font-size: 2.3vw !important;
+  }
+  
+  .MuiButton-text.MuiButton-textPrimary{
+    font-size: 1.9vw;
+    margin: 0 1.5vw;
+    padding: 0.8vh 3.3vw;
+    box-shadow: 0 0 1.3vw 0.18vw #FF3131;
+  }
+  .MuiButton-text.MuiButton-textPrimary.green{
+    background: #00732F;
+    color: #ffffff;
+    -webkit-text-stroke: unset;
+    border: 3px solid black;
+    margin: 3.5vh 0;
+    width: 100%;
+    box-shadow: 0 0 1.5vw 0.2vw #00732F;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  
+  .MuiTypography-h2{
+    font-size: 9vw !important;
+    margin-bottom: 30px !important;
+  }
+  .MuiTypography-h3{
+    max-width: 90vw;
+    font-size: 3.3vw !important;
+  }
+  
+  .MuiButton-text.MuiButton-textPrimary{
+    font-size: 2.9vw;
+    margin: 0 1.5vw;
+  }
+  
+  .MuiButton-text.MuiButton-textPrimary.green{
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 800px){
+  
+  .MuiTypography-h2{
+    font-size: 40px !important;
+    margin-bottom: 30px !important;
+  }
+  .MuiTypography-h3{
+    font-size: 28px !important;
+  }
+  
+  .MuiButton-text.MuiButton-textPrimary{
+    font-size: 22px;
+    margin: 15px 0;
   }
 }
