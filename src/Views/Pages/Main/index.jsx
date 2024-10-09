@@ -19,10 +19,7 @@ const VideoWrapper = emotionStyled(Box)`
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    @media(max-width: 1000px){
-      display: none;
-      position: unset;
-    }
+    
 
 `
 const BackGroundVideo = emotionStyled(Box)`
@@ -31,15 +28,13 @@ const BackGroundVideo = emotionStyled(Box)`
     object-fit: cover;
     object-position: center;
     overflow-x: hidden;
-    @media(max-width: 1000px){
-      display: none;
-    }
+   
 `
 const MainPage = (props) => {
   return (
     <PageWrapper>
         <VideoWrapper>
-          <BackGroundVideo component="video" autoPlay muted loop controls={false}>
+          <BackGroundVideo component="video" autoPlay muted loop playsInline>
               <source src={bgVideo} type="video/mp4" />
               Your browser does not support the video tag.
           </BackGroundVideo>

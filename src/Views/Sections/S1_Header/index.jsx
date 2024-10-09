@@ -1,7 +1,7 @@
 import emotionStyled from '@emotion/styled'
 import React, { useEffect, useRef, useState } from 'react'
 import bgVideo from '../../../assets/Dubai-bg-updated.mp4'
-import logo from '../../../assets/Dubau-logo.webm'
+import logo from '../../../assets/Dubaulogoloopweb.mp4'
 import oldContainer from '../../../assets/old-container.png'
 import { Box, Button, Container, Grid, Link, Menu, Typography } from '@mui/material'
 import { CA, dexToolsLink, tgLink, uniSwapLink, xLink } from '../../../links'
@@ -14,7 +14,7 @@ const Wrapper = emotionStyled.div`
 `
 const LogoVideo = emotionStyled(Box)`
   height: 40vh;
-  width: auto;
+  width: 100%;
 `
 
 const BackGroundVideo = emotionStyled(Box)`
@@ -82,9 +82,16 @@ const HeaderSection = () => {
 
   return (
     <Wrapper>
-        <BackGroundVideo component="video" autoPlay muted loop controls={false}>
-            <source src={bgVideo} type="video/mp4" />
-            Your browser does not support the video tag.
+        <BackGroundVideo
+          component="video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          controls={false}
+        >
+          <source src={logo} type="video/mp4" />
+          Your browser does not support the video tag.
         </BackGroundVideo>
         <Container maxWidth="xl">
           <Grid container>
@@ -115,17 +122,17 @@ const HeaderSection = () => {
             </Grid>
             <Grid xs={12} textAlign={'center'} margin={'40px 0'}>
               <AlertDialog />
-              <LogoVideo component="video" autoPlay muted loop controls={false}>
+              {/* <LogoVideo component="video" autoPlay muted loop controls={false}>
                   <source src={logo} type="video/mp4" />
                   Your browser does not support the video tag.
-              </LogoVideo>
+              </LogoVideo> */}
             </Grid>
           </Grid>
         </Container>
         
-        <Container maxWidth="md">
+        <Container maxWidth="md" style={{position: 'absolute',bottom: '36px',left: '0',right: '0'}}>
           <Grid xs={12} container textAlign={'center'}>  
-            <Grid xs={12} paddingBottom={4}>
+            <Grid xs={12} paddingBottom={3}>
                <Button onClick={copyText} style={{minWidth:'100%',display:'flex', justifyContent: 'space-between'}} target='_blank'>
                 <span>CA:</span>
                 <span id="textToCopy">{CA}</span>
