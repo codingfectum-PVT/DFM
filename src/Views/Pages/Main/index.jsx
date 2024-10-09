@@ -38,12 +38,12 @@ const BackGroundVideo = emotionStyled(Box)`
 const MainPage = (props) => {
   return (
     <PageWrapper>
-        {/* <VideoWrapper>
+        <VideoWrapper>
           <BackGroundVideo component="video" autoPlay muted loop controls={false}>
               <source src={bgVideo} type="video/mp4" />
               Your browser does not support the video tag.
           </BackGroundVideo>
-        </VideoWrapper> */}
+        </VideoWrapper>
         <HeaderSection />
         <About />
         <Tokenomics />
