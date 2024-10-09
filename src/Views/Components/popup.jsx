@@ -45,7 +45,7 @@ export default function AlertDialog() {
         keepMounted
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
-        style={{backgroundColor:'#070707b0', maxWidth: 'unset'}}
+        style={{backgroundColor:'#070707b0'}}
       >
         <DialogContent
         style={{backgroundColor:'#000'}}>
@@ -56,7 +56,6 @@ export default function AlertDialog() {
         <DialogActions
         style={{backgroundColor:'#000'}}>
           <Button onClick={handleClose} className='green'>Yallah Habibi!</Button>
-          <Button onClick={handleClose} style={{width: '150px'}}>No</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
