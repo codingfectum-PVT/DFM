@@ -87,13 +87,39 @@ const CardBox = emotionStyled(Grid)`
     }    
 
 `
+const CardShaker = emotionStyled(Box)`
+    img{
+        transition: transform 350ms ease;
+        animation: shake 1000ms ease-in infinite;
+
+        
+
+        @keyframes shake {
+            45% {
+                transform: rotate(5deg);
+            }
+            60% {
+                transform: rotate(-5deg);
+            }
+            70% {
+                transform: rotate(2deg);
+            }
+            80% {
+                transform: rotate(-5deg);
+            }
+            95% {
+                transform: rotate(-2deg);
+            }
+        }
+    }
+`
 const Card = ({imgsrc, text}) => {
     return(
         <Grid xs={12} sm={6} md={4} padding={{xs: '15px 0',sm:3}}>
-            <Box>
+            <CardShaker>
                 <CardBoxImg src={imgsrc} style={{width:'100%', height: 'auto'}}/>
                 <Button href={xLink} className='green' target='_blank'>{text}</Button>
-            </Box>
+            </CardShaker>
         </Grid>
     )
 }
