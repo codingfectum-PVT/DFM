@@ -45,18 +45,18 @@ export default function AlertDialog() {
         keepMounted
         onClose={handleClose}
         aria-describedby="alert-dialog-slide-description"
-        style={{backgroundColor:'#070707b0'}}
+        style={{backgroundColor:'#070707b0', maxWidth: 'unset'}}
       >
         <DialogContent
         style={{backgroundColor:'#000'}}>
           <DialogContentText id="alert-dialog-slide-description">
-            <Typography variant='h3'>Are you familiar with Dubai Financial Market General Index</Typography>
+            <Typography variant='h3'>Want to make oil money?</Typography>
           </DialogContentText>
         </DialogContent>
         <DialogActions
         style={{backgroundColor:'#000'}}>
+          <Button onClick={handleClose} className='green'>Yallah Habibi!</Button>
           <Button onClick={handleClose} style={{width: '150px'}}>No</Button>
-          <Button onClick={handleClose} style={{width: '150px'}} className='green'>Yes</Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
