@@ -132,7 +132,7 @@ const HeaderSection = () => {
         
         <Container maxWidth="md" style={{position: 'absolute',bottom: '36px',left: '0',right: '0'}}>
           <Grid xs={12} container textAlign={'center'}>  
-            <Grid xs={12} paddingBottom={3}>
+            <Grid xs={12} paddingBottom={{xs:0 , md: 3}}>
                <Button onClick={copyText} style={{minWidth:'100%',display:'flex', justifyContent: 'space-between'}} target='_blank'>
                 <span>CA:</span>
                 <span id="textToCopy">{CA}</span>

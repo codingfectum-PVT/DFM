@@ -9,25 +9,25 @@ const Wrapper = emotionStyled.div`
     min-height: 100vh;
     background-image: url(${bg1}),url(${bg2});
     background-repeat: no-repeat;
-    background-size: 35vw;
+    background-size: 28vw;
     background-position: bottom left, bottom right;
-    padding: 10vh 20px;
+    padding: 10vh 20px 22vh;
     text-align: center;
 
     @media(max-width: 1600px){
-        padding: 15vh 20px;
-    background-size: 25vw;
+        padding: 15vh 20px 22vh;
+        background-size: 25vw;
     
     }
     @media(max-width: 1100px){
         padding: 80px 20px;
         background-image: url(${bg1});
-        background-size: 80%;
+        background-size: 40%;
     }
     @media(max-width: 800px){
         padding: 50px 20px;
         background-image: url(${bg1});
-        background-size: 90%;
+        background-size: 40%;
     }
 `
 export const About = () => {
